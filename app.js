@@ -6,6 +6,8 @@ const app = express();
 //Define the port
 const PORT = 3005;
 
+app.use(express.static('public'));
+
 //Start a server in the designated port
 app.listen(PORT, () => {
     console.log(`Server running in http://localhost:${PORT}`)
