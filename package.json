@@ -20,5 +20,8 @@
   "homepage": "https://github.com/RoughHouseRandy/appointment_scheduler#readme",
   "dependencies": {
     "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
