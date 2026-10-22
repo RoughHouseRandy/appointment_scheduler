@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Scheduler</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/styles.css">
+    <!-- Script -->
+    <script src="/scripts/script.js" defer></script>
 </head>
 <body>
     <main>
@@ -14,12 +17,21 @@
                 <fieldset class="field-body">
                     <label for="fname">First name</label>
                     <input type="text" id="fname" name="fname">
+                    <span class="error-msg" id="error-msg-fname">Please enter your first name</span>
+                    
+                    
                     <label for="lname">Last name</label>
                     <input type="text" id="lname" name="lname">
+                    <span class="error-msg" id="error-msg-lname">Please enter your last name</span>
+
                     <label for="meeting-date">Meeting Date</label>
                     <input type="date" name="meeting-date" id="meeting-date">
+                    <span class="error-msg" id="error-msg-date">Please select a date for the appointment</span>
+
                     <label for="meeting-time">Meeting Time</label>
                     <input type="datetime">
+                    <span class="error-msg" id="error-msg-time">Please select a meeting time</span>
+
                     <button type="submit" id="submit">Book Appointment</button>
                 </fieldset>
             </form>
