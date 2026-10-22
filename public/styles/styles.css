@@ -17,3 +17,7 @@ h1 {
     border-radius:1rem;
     gap:.5rem;
 }
+.field-body {
+    display: flex;
+    flex-direction: column;
+}
