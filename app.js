@@ -22,3 +22,10 @@ app.get('/', (req, res) => {
 app.get('/confirm', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 })
+
+app.post('/submit-order', (req,res) => {
+    
+
+    //display confirmation
+    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+})
