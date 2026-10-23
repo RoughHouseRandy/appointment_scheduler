@@ -13,7 +13,7 @@
     <main>
         <div id="main">
             <h1>Appointment Scheduler</h1>
-            <form id="appointment" method="get" action="#">
+            <form id="appointment" method="post" action="/submit-order">
                 <fieldset class="field-body">
                     <label for="fname">First name</label>
                     <input type="text" id="fname" name="fname">
@@ -32,7 +32,7 @@
                     <input type="time" id="meeting-time" name="meeting-time">
                     <span class="error-msg" id="error-msg-time">Please select a meeting time</span>
 
-                    <button type="submit" id="submit">Book Appointment</button>git
+                    <button type="submit" id="submit">Book Appointment</button>
                 </fieldset>
             </form>
         </div>
