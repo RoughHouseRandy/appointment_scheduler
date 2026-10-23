@@ -13,7 +13,7 @@ document.getElementById("appointment").onsubmit = () => {
     // Get the meeting-date field, trim and store to a variable
     let date = document.getElementById("meeting-date").value;
     // Get the meeting-time field, trim and store to a variable
-    let time = document.getElementById("meeting-time");
+    let time = document.getElementById("meeting-time").value;
 
     // If the fname field is empty, throw an error message and halt validation.
     if (fname === "") {
@@ -34,13 +34,10 @@ document.getElementById("appointment").onsubmit = () => {
     }
 
     // If the time field is empty, throw an error message and halt validation.
-    if (time === null) {
+    if (time === "") {
         validated = false;
         document.getElementById("error-msg-time").style.display = "block";
     }
-
-    console.log(`Time value after: ${time}`)
-    console.log(typeof(time))
 
     return validated;
 
