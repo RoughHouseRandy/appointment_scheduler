@@ -17,3 +17,8 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
+
+//Send route to confirm page
+app.get('/confirm', (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+})
