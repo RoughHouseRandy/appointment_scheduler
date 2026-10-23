@@ -6,7 +6,11 @@ const app = express();
 //Define the port
 const PORT = 3005;
 
+const appointments = [];
+
 app.use(express.static('public'));
+
+app.use(express.urlencoded({extended: true}));
 
 //Start a server in the designated port
 app.listen(PORT, () => {
@@ -23,9 +27,18 @@ app.get('/confirm', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 })
 
-app.post('/submit-order', (req,res) => {
-    
+app.get(`/admin`, (req,res) => {
+    res.send(appointments);
+})
 
+app.post('/submit-order', (req,res) => {
+
+    const appointment = req.body;
+    appointment['timestamp'] = new Date();
+    console.log(appointment);
+    appointments.push(appointment);
+    console.log(appointments);
     //display confirmation
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 })
+
